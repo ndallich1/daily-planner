@@ -23,7 +23,7 @@
    //  });
 
 
-  addEventListener('click')
+  // addEventListener('click')
    
   var today = dayjs();
     $('#currentDay').text(today.format('dddd, MMMM D, YYYY'));
