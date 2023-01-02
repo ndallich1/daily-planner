@@ -47,11 +47,11 @@ displayColor();
     console.log(scheduleItem);
     let scheduleText = scheduleItem.val();
     console.log(scheduleText);
+    let timeBlockId = $(this).parent().attr("id");
+    localStorage.setItem(timeBlockId, scheduleText);
   }
   // Hint: difficult part = save under a keyname that will be recognized. Retrieve from local storage and write to a string.  
-/*   let timeBlockId = $(this).parent().attr("id");
 
-    localStorage.setItem(); */
   
   /* TODO: Add code to display the current date in the header of the page. */
   // Complete
