@@ -50,11 +50,8 @@ $(function () {
 
   // Calls the function 
   displayColor();
-    
-  /* TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id
-  attribute of each time-block be used to do this? */
 
-  // function that handles the form submission by retrieving user input that was saved in local storage and setting the values of the corresponding textarea elements. 
+  // this function handles the form submission by retrieving user input that was saved in local storage and setting the values of the corresponding textarea elements. 
   function handleFormSubmit(event) {
     event.preventDefault();
     // Console logs the save button 
@@ -65,9 +62,9 @@ $(function () {
     // Defined variable to get the value of every matched element in the scheduleItem
     let scheduleText = scheduleItem.val();
     console.log(scheduleText);
-    // Defined variable to get the parent of the save button, then add a new attribute of id 
+    // Defined variable to get any parents of the save button that have an id attribute 
     let timeBlockId = $(this).parent().attr("id");
-    // The setItem() method of the Storage interface, when passed a key name and value, will add that key to the given Storage object, or update that key's value if it already exists 
+    // set a new item into storage and add the timeBlockId key to the storage object or update that key's value if it already exists 
     localStorage.setItem(timeBlockId, scheduleText);
   }
   
